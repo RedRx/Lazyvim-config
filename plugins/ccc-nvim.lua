@@ -11,15 +11,15 @@ return {
     },
     opts = {
       highlighter = {
-        auto_enable = true,
-        lsp = true,
+        auto_enable = false,
+        lsp = false,
       },
     },
-    config = function(_, opts)
-      require("ccc").setup(opts)
-      if opts.highlighter and opts.highlighter.auto_enable then
-        vim.cmd.CccHighlighterEnable()
-      end
-    end,
+    -- config = function(_, opts)
+    --   require("ccc").setup(opts)
+    --   if opts.highlighter and opts.highlighter.auto_enable then
+    --     vim.cmd.CccHighlighterEnable()
+    --   end
+    -- end,
   },
 }
