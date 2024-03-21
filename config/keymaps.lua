@@ -146,8 +146,7 @@ keymap.set({ "n", "v" }, "gm", function()
   Util.format({ force = true })
 end, { desc = "Format" })
 
-vim.keymap.set("n", "<leader>zP", "<cmd>PickColor<cr>", { desc = "Pick Color" })
-vim.keymap.set("i", "<leader>zI", "<cmd>PickColorInsert<cr>", { desc = "Pick Color Insert" })
+vim.keymap.set("n", "<leader>zP", "<cmd>PickColor<cr>", { desc = "Pick RGBA Color" })
 vim.keymap.set("n", "<leader>zh", "<cmd>ConvertHEXandRGB<cr>", { desc = "ConvertHEXandRGB" })
 vim.keymap.set("n", "<leader>zH", "<cmd>ConvertHEXandHSL<cr>", { desc = "ConvertHEXandHSL" })
 
