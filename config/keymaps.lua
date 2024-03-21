@@ -6,6 +6,7 @@
 
 -- discipline.cowboy()
 
+local Util = require("lazyvim.util")
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true, nowait = true }
 
@@ -133,3 +134,16 @@ end, { desc = "Go to previous diagnostic" })
 keymap.set("n", "<leader>R", function()
   require("bearydev.hsl").replaceHexWithHSL()
 end, { desc = "replaceHexWithHSL" })
+
+keymap.set(
+  "n",
+  "<leader>?",
+  "<cmd> Telescope current_buffer_fuzzy_find <CR>",
+  { desc = "Fuzzy find in current buffer" }
+)
+
+keymap.set({ "n", "v" }, "gm", function()
+  Util.format({ force = true })
+end, { desc = "Format" })
+
+keymap.set("n", "<C-u>", "<cmd>UndotreeToggle<cr>", opts)
