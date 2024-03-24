@@ -14,7 +14,7 @@ function M.cowboy()
       end
       if count >= 10 then
         ok, id = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
-          icon = "??",
+          icon = "🤠",
           replace = id,
           keep = function()
             return count >= 10
@@ -26,7 +26,7 @@ function M.cowboy()
         end
       else
         count = count + 1
-        timer:start(2000, 0, function()
+        timer:start(3000, 0, function()
           count = 0
         end)
         return map

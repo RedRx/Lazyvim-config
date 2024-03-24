@@ -2,9 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- local discipline = require("bearydev.discipline")
-
--- discipline.cowboy()
+local discipline = require("bearydev.discipline")
+discipline.cowboy()
 
 local Util = require("lazyvim.util")
 local keymap = vim.keymap
@@ -118,7 +117,7 @@ keymap.set("n", "gk", function()
   vim.diagnostic.goto_prev()
 end, { desc = "Go to previous diagnostic" })
 
-keymap.set("n", "<leader>R", function()
+keymap.set("n", "<leader>X", function()
   require("bearydev.hsl").replaceHexWithHSL()
 end, { desc = "replaceHexWithHSL" })
 
