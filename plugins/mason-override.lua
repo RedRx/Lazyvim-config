@@ -72,8 +72,6 @@ return {
       "nginx-language-server",
       "beautysh",
       "vim-language-server",
-      "bash-debug-adapter",
-      "bash-language-server",
 
       -- SQL
       "prisma-language-server",
