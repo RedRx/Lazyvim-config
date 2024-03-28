@@ -16,6 +16,7 @@ function M.cowboy()
         ok, id = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
           icon = "🤠",
           replace = id,
+          timeout = 200,
           keep = function()
             return count >= 10
           end,
@@ -26,7 +27,7 @@ function M.cowboy()
         end
       else
         count = count + 1
-        timer:start(3000, 0, function()
+        timer:start(1000, 0, function()
           count = 0
         end)
         return map
