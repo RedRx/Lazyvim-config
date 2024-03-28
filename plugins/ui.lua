@@ -83,16 +83,33 @@ return {
   },
 
   -- statusline
-  -- {
-  --   "nvim-lualine/lualine.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --     options = {
-  --       -- globalstatus = false,
-  --       -- theme = "solarized_dark",
-  --     },
-  --   },
-  -- },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        -- globalstatus = false,
+        -- theme = "solarized_dark",
+        icons_enabled = true,
+        theme = "auto",
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
+        -- color = { fg = "#ffaa88", bg = "black", gui = "italic,bold" },
+        color = { gui = "italic,bold" },
+      },
+      sections = {
+        lualine_a = {
+          {
+            "mode", -- Use the built-in mode component
+            fmt = function(str)
+              -- Custom format function to prepend the Vim icon to the mode text
+              return " " .. str
+            end,
+          },
+        },
+      },
+    },
+  },
 
   -- filename
   {
